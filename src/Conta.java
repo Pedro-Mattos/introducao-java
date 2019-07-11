@@ -4,6 +4,8 @@ public class Conta {
 	int numero;
 	int agencia;
 	String titular;
+	String cpf;
+	String profissao;
 	
 	public void deposita (double valor) {
 		this.saldo += valor;
