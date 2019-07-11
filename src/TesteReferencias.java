@@ -1,27 +1,27 @@
 
 public class TesteReferencias {
 	public static void main(String[] args) {
-	      Conta primeiraConta = new Conta();
-	        primeiraConta.saldo = 200; 
-	        System.out.println(primeiraConta.saldo); 
+	      Conta primeiraConta = new Conta(300, 200);
+	        primeiraConta.deposita(200); 
+	        System.out.println(primeiraConta.getSaldo()); 
 
-	        primeiraConta.saldo += 100;
-	        System.out.println(primeiraConta.saldo);
+	        primeiraConta.saca(100);
+	        System.out.println(primeiraConta.getSaldo());
 
-	        Conta segundaConta = new Conta();
-	        segundaConta.saldo = 300;
+	        Conta segundaConta = new Conta(300, 150);
+	        segundaConta.deposita(300);
 
-	        System.out.println("primeira conta tem " + primeiraConta.saldo);
-	        System.out.println("segunda conta tem " + segundaConta.saldo);
+	        System.out.println("primeira conta tem " + primeiraConta.getSaldo());
+	        System.out.println("segunda conta tem " + segundaConta.getSaldo());
 
-	        segundaConta.agencia = 146;
-	        System.out.println(primeiraConta.agencia);
-	        System.out.println(primeiraConta.numero);
+	        segundaConta.setAgencia(146);
+	        System.out.println(primeiraConta.getAgencia());
+	        System.out.println(primeiraConta.getNumero());
 
-	            System.out.println(segundaConta.agencia);
+	            System.out.println(segundaConta.getAgencia());
 
-	        segundaConta.agencia = 146;
-	        System.out.println("agora a segunda conta está na agencia " + segundaConta.agencia);
+	        segundaConta.setAgencia(230);
+	        System.out.println("agora a segunda conta está na agencia " + segundaConta.getAgencia());
 
 	        if(primeiraConta == segundaConta) {
 	            System.out.println("mesma conta");
